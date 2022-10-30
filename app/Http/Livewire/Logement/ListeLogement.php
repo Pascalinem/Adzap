@@ -9,6 +9,7 @@ class ListeLogement extends Component
 {
     public $logements;
 
+
     public function mount()
     {
         $this->logements = Logement::all();

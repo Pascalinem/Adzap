@@ -11,10 +11,11 @@ class Logement extends Model
     
     protected $fillable = [
         'nom',
+        'description',
         'adresse_rue',
+        'adresse_etage',
         'adresse_ville',
         'adresse_code_postal',
-        'adresse_etage',
         'nombre_chambres',
         'capacite',
         'superficie'
