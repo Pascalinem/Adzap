@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-    <div class="w-full max-w-xs">
+    <div class=" mx-auto w-1/2 max-w-xs">
         <h3 class="mt-6 text-xl">Ajouter un logement </h3>
     <form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 wire:submit.prevent="submit">
         <div class="form-group">
@@ -51,7 +51,7 @@
             @error('superficie') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
        
-        <button type="submit" class="btn btn-primary">Sauvegarder le logement</button>
+        <button type="submit" class="bg-white hover:bg-green-400 text-gray-800 font-semibold mt-8 py-4 px-4 border border-gray-400 rounded shadow">Sauvegarder le logement</button>
     </form>
     </div>
 </x-guest-layout>
