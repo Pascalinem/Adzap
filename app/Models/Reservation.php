@@ -15,5 +15,10 @@ class Reservation extends Model
         'date_fin',
         'statut'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     
 }

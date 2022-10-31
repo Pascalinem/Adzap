@@ -26,6 +26,11 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+Route::get('/reservation/nouveau', function () {
+    return view('reservation/form-nouveau-reservation');
+})->name('nouvelle-reservation');
+
+
 Route::get('/logement/nouveau', function () {
     return view('logement/form-nouveau-logement');
 })->name('nouveau-logement');
@@ -37,5 +42,7 @@ Route::get('/logement/liste', function () {
 Route::get('/logement/{logement}', function (Logement $logement) {
     return view('logement/view',['logement' => $logement]);
 });
+
+
 
 

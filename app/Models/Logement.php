@@ -20,4 +20,9 @@ class Logement extends Model
         'capacite',
         'superficie'
     ];
+
+    public function reservations()
+    {
+        return $this->hasMany(\App\Models\Reservation::class, 'logement_id', 'id');
+    }
 }

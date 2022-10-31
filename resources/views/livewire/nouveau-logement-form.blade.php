@@ -45,6 +45,8 @@
             @error('capacite') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
+        
+
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="superficie">Superficie</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="superficie" placeholder="Entrer la superficie" wire:model="superficie">
