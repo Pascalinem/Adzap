@@ -8,7 +8,7 @@
                     <h2 class="text-white">Créer un nouveau logement</h2>
                   </div>
                   <div class="card-body">
-                    
+                    @livewire('reservation.nouvelle-reservation-form')
                   </div>
                 </div>
             </div>

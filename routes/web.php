@@ -28,7 +28,7 @@ require __DIR__.'/auth.php';
 
 Route::get('/reservation/nouveau', function () {
     return view('reservation/form-nouveau-reservation');
-})->name('nouvelle-reservation');
+});
 
 
 Route::get('/logement/nouveau', function () {
