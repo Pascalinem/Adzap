@@ -18,7 +18,8 @@ class Logement extends Model
         'adresse_code_postal',
         'nombre_chambres',
         'capacite',
-        'superficie'
+        'superficie',
+        'tarif'
     ];
 
     public function reservations()

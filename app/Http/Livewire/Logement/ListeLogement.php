@@ -12,8 +12,13 @@ class ListeLogement extends Component
     protected $listeners = ['getParams' => 'submit'];
     public $date_debut;
     public $date_fin;
+    public $selected_logement_id;
     
-   
+
+    public function selectLogement($logement_id){
+        $this->selected_logement_id = $logement_id;
+        $this->emit('logementSelected', $this->selected_logement_id );
+    }
     
     public function submit($date_debut,$date_fin)
     {

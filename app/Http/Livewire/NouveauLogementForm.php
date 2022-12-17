@@ -17,6 +17,7 @@ class NouveauLogementForm extends Component
     public $nombre_chambres;
     public $capacite;
     public $superficie;
+    public $tarif;
     
 
     public function submit()
@@ -31,6 +32,7 @@ class NouveauLogementForm extends Component
             'nombre_chambres' => 'required',
             'capacite' => 'required',
             'superficie' => 'required',
+            'tarif' =>'required'
             
         ]);
    

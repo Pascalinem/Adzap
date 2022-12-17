@@ -24,6 +24,7 @@ return new class extends Migration
             $table->smallInteger('nombre_chambres');
             $table->integer('capacite');
             $table->integer('superficie');
+            $table->float('tarif');
             $table->timestamps();
         });
     }

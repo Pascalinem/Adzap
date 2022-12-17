@@ -92,8 +92,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'residenceadzap1@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'La résidence Adzap'),
     ],
 
     /*
@@ -114,5 +114,12 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
+
+
+    'reply_to' => ['address' => 'residenceadzap1@gmail.com', 'name' => 'La résidence Adzap'],
+
+
+   
+
 
 ];

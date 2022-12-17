@@ -13,12 +13,18 @@ class Reservation extends Model
         'user_id',
         'date_debut',
         'date_fin',
-        'statut'
+        'statut',
+        'prix'
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function logement()
+    {
+        return $this->belongsTo(Logement::class);
     }
     
 }

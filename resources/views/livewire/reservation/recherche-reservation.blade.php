@@ -1,8 +1,8 @@
 
 
-    <div class=" mx-auto w-1/2 max-w-xs">
-        <h3 class="mt-6 text-xl">Recherche</h3>
-    <form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 wire:submit.prevent="submit">
+    <div class="card">
+        <h3 class="mt-6 text-xl card-header bg-success text-white">Recherche</h3>
+    <form class ="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 card-body" wire:submit.prevent="submit">
         <div class="form-group">
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="date_debut">Date Arrivée</label>
             <input type="date" wire:model.debounce.300ms="date_debut"

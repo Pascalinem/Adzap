@@ -29,19 +29,22 @@
 
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="adresse-code-postal">Code Postal</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="adresse-code-postal" placeholder="Entrer le code postal" wire:model="adresse_code_postal">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="adresse-code-postal" placeholder="Entrer le code postal" 
+            wire:model="adresse_code_postal">
             @error('adresse_code_postal') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="nombre-chambres">Nombre de Chambres</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="nombre-chambres" placeholder="Entrer le nombre de chambres" wire:model="nombre_chambres">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="nombre-chambres" placeholder="Entrer le nombre de chambres" 
+            wire:model="nombre_chambres">
             @error('nombre_chambres') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="capacite">Couchages</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="capacite" placeholder="Entrer le nombre de personnes" wire:model="capacite">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="capacite" placeholder="Entrer le nombre de personnes" 
+            wire:model="capacite">
             @error('capacite') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
 
@@ -49,9 +52,18 @@
 
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="superficie">Superficie</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="superficie" placeholder="Entrer la superficie" wire:model="superficie">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="superficie" placeholder="Entrer la superficie" 
+            wire:model="superficie">
             @error('superficie') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
+
+        <div class="form-group">
+            <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="tarif">Tarif</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="tarif" placeholder="Entrer le tarif par nuit" 
+            wire:model="tarif">
+            @error('tarif') <span class="text-danger">{{ $message }}</span> @enderror
+        </div>
+
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="description">Description</label>
             <textarea type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  class="form-control" id="description" placeholder="Entrer la description" wire:model="description"></textarea>

@@ -13,11 +13,14 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body>
+    <div >
         @include('components.navbar')
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
-        </div>
-    </body>
-    @include('components.footer')
+        <body class="container mx-auto bg-gray-200">
+            
+            <div class=" inset-x-6 font-sans text-gray-900 antialiased">
+                {{ $slot }}
+            </div>
+        </body>
+        @include('components.footer')
+    </div>
 </html>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reservation;
 use Illuminate\Http\Request;
 
 class ReservationController extends Controller
@@ -43,9 +44,12 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($reservation_id){
+      
+        $reservation=Reservation::find($reservation_id) ?? 'Aucune Réservation correspondante';
+        return view('reservation.show',[
+            'reservation'=>$reservation,
+        ]);
     }
 
     /**
