@@ -1,4 +1,4 @@
-<nav class="inset-x-0 border-b-3 border-[#EA7869] top-0 h-30 bg-[#ae76a6] dark:bg-gray-700">
+<nav class="inset-x-0 border-b-3 border-[#EA7869] top-0 h-30 bg-[#ae76a6]">
     <div x-data="{showMenu : false}" class="container max-w-screen-lg mx-auto flex justify-between h-14">
         <!-- Brand-->
     
@@ -55,9 +55,12 @@
             </li>
             @else
             <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu && 'py-1'">
-                <a href="{{ route('login') }}" class="ml-2 text-sm text-gray-700 dark:text-gray-500 underline">Connexion</a>
+                <a href="{{ route('login') }}" class="ml-2 font-bold text-xl text-[#6D257D] dark:text-gray-500">Connexion</a>
             </li>
             @if (Route::has('register'))
+                <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu && 'py-1'">
+                    <a href="{{ route('register') }}" class="ml-2 font-bold text-xl text-[#6D257D] dark:text-gray-500">Créer Compte</a>
+                </li>
             @endif
             @endauth
 
