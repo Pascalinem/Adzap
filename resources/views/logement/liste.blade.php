@@ -4,7 +4,7 @@
       <div class="mt-5 col-md-8">
             <div class="card">
               <div class="card-header bg-success">
-                <h2 class="text-blue">Liste des logements</h2>
+                <h2 class="text-2xl text-[#6D257D] text-blue font-bold mb-6 bg-[#B4A4B5] rounded ">Liste de nos logements</h2>
               </div>
               <div class="card-body">
                 @livewire('logement.liste-logement')

@@ -19,7 +19,7 @@ class Logement extends Model
         'nombre_chambres',
         'capacite',
         'superficie',
-        'tarif'
+        'tarif',
     ];
 
     public function reservations()

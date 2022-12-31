@@ -23,7 +23,7 @@ class ReservationsDatatable extends LivewireDatatable
         ->filterable($this->logementsFilter),
 
         Column::name('user.name')       
-        ->label('Personne')
+        ->label('Client')
         ->filterable(),
 
         DateColumn::name('date_debut')

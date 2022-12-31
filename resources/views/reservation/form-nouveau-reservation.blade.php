@@ -5,7 +5,7 @@
             <div class="mt-5 col-md-8">
                 <div class="card">
                   <div class="card-header bg-success">
-                    <h2 class="text-white">Créer un nouveau logement</h2>
+                    <h2 class="text-white">Faire une nouvelle reservation</h2>
                   </div>
                   <div class="card-body">
                     @livewire('reservation.nouvelle-reservation-form')

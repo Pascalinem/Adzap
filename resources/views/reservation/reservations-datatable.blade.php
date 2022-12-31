@@ -1,13 +1,13 @@
 
 <x-guest-layout>
-    <div class="container mt-5">
+    <div class="container mx-6 mt-5">
         <div class="row mt-5 justify-content-center">
             <div class="mt-5 col-md-8">
                 <div class="card">
                   <div class="card-header bg-success">
-                    <h2 class="text-white">Créer un nouveau logement</h2>
+                   
                   </div>
-                  <div class="card-body">
+                  <div class="mr-10 card-body">
                     @livewire('reservation.reservations-datatable')
                     @livewire('reservation.reservations-calendar')
                   </div>

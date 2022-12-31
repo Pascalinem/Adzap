@@ -30,6 +30,10 @@ Route::get('/apropos', function () {
     return view('apropos');
 })->name('adzap_et_la_ville');
 
+Route::get('/options', function () {
+    return view('options');
+})->name('options');
+
 Route::get('send-mail', [MailController::class, 'index']);
 
 Route::get('/contact', function () {

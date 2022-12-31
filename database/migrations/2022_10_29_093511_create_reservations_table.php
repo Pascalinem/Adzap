@@ -19,8 +19,9 @@ return new class extends Migration
             $table->integer('user_id');
             $table->date('date_debut');
             $table->date('date_fin');
-            $table->string('statut');
-            //$table->float('prix');
+            $table->string('statut')->default('En attente de validation');
+            $table->integer('nombre_personnes');
+            $table->double('prix_total')->nullable();
             $table->timestamps();
         });
     }

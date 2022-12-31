@@ -25,9 +25,9 @@
       @endif
     </div>
     <div class="px-6 pt-4 pb-2">
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#photography</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#travel</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#winter</span>
+      <span class="inline-block bg-[#ae76a6] rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="{{ route('options') }}">Options</a> </span>
+      <span class="inline-block bg-[#B4A4B5]  rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://www.brusselsairlines.com/be/fr/homepage"> Voyage</a></span>
+      <span class="inline-block bg-[#EA7869] rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://www.lachainemeteo.be/meteo-cameroun/ville-4401/previsions-meteo-yaounde-aujourdhui">Meteo</a> </span>
     </div>
   </div>
  

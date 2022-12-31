@@ -1,7 +1,7 @@
 
 
     <div class="card">
-        <h3 class="mt-6 text-xl card-header bg-success text-white">Recherche</h3>
+        <h3 class="mt-6 text-xl pl-4 card-header bg-[#B4A4B5] rounded text-[#6D257D] font-bold mb-4">Recherche logement selon disponibilités</h3>
     <form class ="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 card-body" wire:submit.prevent="submit">
         <div class="form-group">
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="date_debut">Date Arrivée</label>
@@ -22,7 +22,7 @@
         </div>
        
               
-        <button type="submit" class="bg-white hover:bg-green-400 text-gray-800 font-semibold mt-8 py-4 px-4 border border-gray-400 rounded shadow" wire:click="setParams()">C'est parti</button>
+        <button type="submit" class="bg-[#6D257D] hover:bg-[#EA7869]  text-white font-semibold mt-8 py-4 px-4 border border-gray-400 rounded shadow" wire:click="setParams()">C'est parti !</button>
     </form>
     </div>
 

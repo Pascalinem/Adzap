@@ -12,7 +12,11 @@ use Illuminate\Queue\SerializesModels;
 
 class RegistrationNotificationMail extends Mailable
 {
-    use Queueable, SerializesModels;
+    use Queueable, SerializesModels;  
+
+
+
+    
 
     /**
      * Create a new message instance.
@@ -22,6 +26,7 @@ class RegistrationNotificationMail extends Mailable
     public function __construct()
     {
         //
+        
     }
 
     /**

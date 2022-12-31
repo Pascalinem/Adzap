@@ -10,19 +10,28 @@
 
     </div>
     <div>
-        <div  class=" px-2 py-6 mx-auto bg-white rounded-lg shadow-md">
-            <img style="width:300px; " src="{{ Vite::asset('resources/images/'.$logement->nom.'/cuisine'.$logement->nom.'.jpg') }}" alt="cuisine"/>
-        </div>
-        <div class=" px-2 py-6 mx-auto bg-white rounded-lg shadow-md">
-            <img style="width:300px;" src="{{ Vite::asset('resources/images/'.$logement->nom.'/sdb'.$logement->nom.'.jpg') }}" alt="sdb"/>
-        </div>
+        
+            <img class="hover:scale-150 transition-all inline-block px-2 py-6 mx-auto bg-gray-200 rounded-lg  w-80 h-90" src="{{ Vite::asset('resources/images/'.$logement->nom.'/cuisine'.$logement->nom.'.jpg') }}" alt="cuisine"/>
+        
+      
+            <img class="hover:scale-150 transition-all inline-block px-2 py-6  bg-gray-200 rounded-lg  w-80" src="{{ Vite::asset('resources/images/'.$logement->nom.'/sdb'.$logement->nom.'.jpg') }}" alt="sdb"/>
+        
     </div>
 </div>
 <div >
-    <h3 class="mt-10 text-2xl text-blue-500 font-bold">Appartement {{ $logement->nombre_chambres }} chambres </h3>
-    <p class="mt-10"> {{ $logement->description }}
+    <h3 class="inline-block mt-10 text-2xl text-blue-500 font-bold">Appartement {{ $logement->nombre_chambres }} chambres </h3>
+    
+   
+    <p class="my-10"> {{ $logement->description }}
     </p>
 </div>
+<div>
+    <h2 class="text-xl text-[#6D257D] my-6 font-bold" >Disponibilités</h2>
+<span class=" text-sm mx-20 w-100"> @livewire('logement.logement-calendar',['logement_id'=> $logement->id])</span>
+
+</div>
+@livewireScripts
+    @stack('scripts')
 </x-guest-layout>
     
 

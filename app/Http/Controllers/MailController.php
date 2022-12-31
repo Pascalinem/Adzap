@@ -5,14 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\RegistrationNotificationMail;
+use Illuminate\Support\Facades\Auth;
+
 
 class MailController extends Controller
+
+
 {
     public function index()
     {
 
-       
-     Mail::to('your_email@gmail.com')->send(new RegistrationNotificationMail());
+        $user= Auth::user(); 
+
+     Mail::to($user->email)->send(new RegistrationNotificationMail($user));
+
     }
 
 }
