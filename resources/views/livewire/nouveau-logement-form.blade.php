@@ -6,46 +6,46 @@
         <div class="form-group">
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="nom">Nom Appartement</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="nom" placeholder="Entrer le nom" wire:model="nom">
-            @error('nom') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('nom') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
        
         <div class="form-group">
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="adresse-rue">Rue</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" value="résidence Adzap" class="form-control" id="adresse-rue" placeholder="rue"  wire:model="adresse_rue">
-            @error('adresse_rue') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('adresse_rue') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
        
         <div class="form-group">
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="adresse-etage">Etage</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="adresse-etage" placeholder="Entrer l'étage" wire:model="adresse_etage">
-            @error('adresse_etage') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('adresse_etage') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="adresse-ville">Ville</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="ville" value= "Odza" class="form-control" id="adresse-ville"  wire:model="adresse_ville">
-            @error('adresse_ville') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('adresse_ville') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="adresse-code-postal">Code Postal</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="adresse-code-postal" value ="Borne 12" placeholder=" "
             wire:model="adresse_code_postal">
-            @error('adresse_code_postal') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('adresse_code_postal') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
             <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="nombre-chambres">Nombre de Chambres</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="nombre-chambres" placeholder="Entrer le nombre de chambres" 
             wire:model="nombre_chambres">
-            @error('nombre_chambres') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('nombre_chambres') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="capacite">Couchages max disponibles</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="capacite" placeholder="Entrer le nombre de couchages" 
             wire:model="capacite">
-            @error('capacite') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('capacite') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
         
@@ -54,20 +54,36 @@
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="superficie">Superficie en m²</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="superficie" placeholder="Entrer la superficie" 
             wire:model="superficie">
-            @error('superficie') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('superficie') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="tarif">Tarif</label>
             <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" class="form-control" id="tarif" value="45" placeholder="ex. 45 "
             wire:model="tarif">
-            @error('tarif') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('tarif') <span class="text-red-400">{{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
             <label class=" mt-4 block text-gray-700 text-sm font-bold mb-2" for="description">Description</label>
             <textarea type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  class="form-control" id="description" placeholder="Entrer la description" wire:model="description"></textarea>
-            @error('description') <span class="text-danger">{{ $message }}</span> @enderror
+            @error('description') <span class="text-red-400">{{ $message }}</span> @enderror
+        </div>
+        <div class="form-group">
+            <label for="living" class="test-sm font-bold text-gray-400"> Ajouter photo living   </label>
+            <input type="file" class="form-control-file border" name="living" wire:model="living">
+        </div>
+                <div class="form-group">
+            <label for="cuisine" class="test-sm font-bold text-gray-400">Ajouter photo cuisine  </label>
+            <input type="file" class="form-control-file border" name="cuisine" wire:model="cuisine">
+        </div>
+        <div class="form-group">
+            <label for="sdb" class="test-sm font-bold text-gray-400">Ajouter photo salle de bain  </label>
+            <input type="file" class="form-control-file border" name="sdb" wire:model="sdb">
+        </div>
+        <div class="form-group">
+            <label for="autre_photo" class="test-sm font-bold text-gray-400">Ajouter autre photo   </label>
+            <input type="file" class="form-control-file border" name="autre_photo" wire:model="autre_photo">
         </div>
        
         <button type="submit" class=" mb-10  bg-[#EA7869] hover:bg-green-400 text-[#6D257D] font-semibold mt-8 py-4 px-16 border border-none rounded shadow">Sauvegarder le logement</button>

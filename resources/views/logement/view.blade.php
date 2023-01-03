@@ -6,15 +6,15 @@
 
 <div class="grid gap-4 grid-cols-2 grid-rows-1 mt-6">
     <div class=" px-10 py-6 mx-auto bg-white rounded-lg shadow-md">
-        <img style="width:800px;" src="{{ Vite::asset('resources/images/'.$logement->nom.'/living'.$logement->nom.'.jpg') }}" alt="living"/>
+        <img style="width:800px;" src="{{ URL::asset('/images/'.$logement->nom.'/living'.$logement->nom.'.jpg') }}" alt="living"/>
 
     </div>
     <div>
         
-            <img class="hover:scale-150 transition-all inline-block px-2 py-6 mx-auto bg-gray-200 rounded-lg  w-80 h-90" src="{{ Vite::asset('resources/images/'.$logement->nom.'/cuisine'.$logement->nom.'.jpg') }}" alt="cuisine"/>
+            <img class="hover:scale-150 transition-all inline-block px-2 py-6 mx-auto bg-gray-200 rounded-lg  w-80 h-90" src="{{ URL::asset('/images/'.$logement->nom.'/cuisine'.$logement->nom.'.jpg') }}" alt="cuisine"/>
         
       
-            <img class="hover:scale-150 transition-all inline-block px-2 py-6  bg-gray-200 rounded-lg  w-80" src="{{ Vite::asset('resources/images/'.$logement->nom.'/sdb'.$logement->nom.'.jpg') }}" alt="sdb"/>
+            <img class="hover:scale-150 transition-all inline-block px-2 py-6  bg-gray-200 rounded-lg  w-80" src="{{ URL::asset('/images/'.$logement->nom.'/sdb'.$logement->nom.'.jpg') }}" alt="sdb"/>
         
     </div>
 </div>

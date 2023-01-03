@@ -25,6 +25,10 @@ return new class extends Migration
             $table->integer('capacite');
             $table->integer('superficie')->nullable();
             $table->double('tarif')->default(45);
+            $table->string('living')->nullable();
+            $table->string('cuisine')->nullable();
+            $table->string('sdb')->nullable();
+            $table->string('autre_photo')->nullable();
             $table->timestamps();
         });
     }

@@ -20,6 +20,10 @@ class Logement extends Model
         'capacite',
         'superficie',
         'tarif',
+        'living',
+        'cuisine',
+        'sdb',
+        'autre_photo',
     ];
 
     public function reservations()

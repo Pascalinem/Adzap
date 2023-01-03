@@ -3,7 +3,7 @@
 @foreach ($logements as $logement)
 
 <div class="{{$logement->id == $selected_logement_id  ? "bg-green-200" : ""}} w-full mx-4 my-4 sm:w-1/2 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded overflow-hidden shadow-lg">
-    <img class="w-full" src="{{ Vite::asset('resources/images/'.$logement->nom.'/living'.$logement->nom.'.jpg') }}" alt="image">
+    <img class="w-full" src="{{ URL::asset('/images/'.$logement->nom.'/living'.$logement->nom.'.jpg') }}" alt="image">
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2"> <a href="{{ $logement->id }}">Appartement {{ $logement->nom }}</a></div>
       <p class="text-gray-700 text-base">

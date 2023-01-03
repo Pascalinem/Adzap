@@ -8,7 +8,8 @@
         </button>
         <!-- Nav Links-->
         <ul class="md:flex text-gray-700 text-base mr-3 origin-top"
-            :class="{ 'block absolute top-14 border-b bg-white w-full p-2': showMenu, 'hidden': !showMenu}"
+            :class="{ 'block absolute top-14 border-b bg-[#ae76a6] w-full p-2': showMenu, 'hidden': !showMenu}"
+            style="z-index:10;"
             id="navbar-main" x-cloak>
             <li class="px-3 cursor-pointer hover:bg-purple-50 flex items-center hover:text-gray-800" :class="showMenu && 'py-1'">
                 <a href="{{ route('accueil') }}" class="ml-2 font-bold text-xl text-[#6D257D] dark:text-gray-500 " >Accueil</a>
