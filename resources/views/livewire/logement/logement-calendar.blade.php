@@ -9,15 +9,14 @@
     #calendar {
         margin: 10px auto;
         padding: 10px;
-        max-width: 1100px;
-        height: 700px;
+        max-width: 500px;
+        height: 480px;
     }
 </style>
 <div>
     
     <div id='calendar-container' wire:ignore>
         <div id='calendar'></div>
-        test
     </div>
 </div>
 @push('scripts')

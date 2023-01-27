@@ -40,9 +40,7 @@ Route::get('/contact', function () {
     return view('contact');
 })->name('contactez-nous');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard',  [ReservationController::class, 'index'])->middleware('web','auth')->name('dashboard');
 
 require __DIR__.'/auth.php';
 
@@ -60,7 +58,7 @@ Route::get('/reservation/calendrier', function () {
     return view('reservation/reservations-calendar');
 })->middleware('web','auth')->name('liste-reservations-calendrier');
 
-Route::get('/reservation/{reservation_id}', [ReservationController::class, 'show'])->middleware('web','auth');
+Route::get('/reservation/{reservation_id}', [ReservationController::class, 'show'])->middleware('web','auth')->name('reservation-courante');
 
 Route::get('/logement/nouveau', function () {
     return view('logement/form-nouveau-logement');

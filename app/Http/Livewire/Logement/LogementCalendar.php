@@ -14,9 +14,17 @@ class LogementCalendar extends Component
 {
     public $events = [];
     public $logement_id;
-    public $date_debut ='2022-12-28';
-    public $date_fin = '2022-12-31';
-    
+    public $date_debut;
+    public $date_fin;
+    //protected $listeners = ['getParams' => 'setDates'];
+
+   // public function setDates($date_debut,$date_fin)
+   //{
+   //    $this->date_debut = $date_debut;
+   //    $this->date_fin = $date_fin;
+//
+   //}
+
     public function render()
 
     {

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('statut')->default('En attente de validation');
             $table->integer('nombre_personnes');
             $table->double('prix_total')->nullable();
+            $table->double('prix_cfa')->nullable();
             $table->timestamps();
         });
     }

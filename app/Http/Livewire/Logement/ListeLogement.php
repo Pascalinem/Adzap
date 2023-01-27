@@ -12,7 +12,9 @@ class ListeLogement extends Component
     protected $listeners = ['getParams' => 'submit'];
     public $date_debut;
     public $date_fin;
+    public $logement_selectable = false;
     public $selected_logement_id;
+    public $nombre_personnes;
     
 
     public function selectLogement($logement_id){
@@ -20,11 +22,15 @@ class ListeLogement extends Component
         $this->emit('logementSelected', $this->selected_logement_id );
     }
     
-    public function submit($date_debut,$date_fin)
+    public function submit($date_debut,$date_fin, $nombre_personnes)
     {
+        $this->logement_selectable = true;
         $this->date_debut = $date_debut;
         $this->date_fin = $date_fin;
+        $this->nombre_personnes = $nombre_personnes;
+
     }
+
     public function render()
     {
         if($this->date_debut != null){
@@ -34,8 +40,9 @@ class ListeLogement extends Component
             $query->where([['date_debut','<=',$this->date_debut],
                 ['date_fin','>',$this->date_debut]])
                 ->orWhere([['date_debut','<',$this->date_fin],['date_fin','>',$this->date_fin]])
+                
                 ;
-            }))->get();
+            }))->Where('capacite','>=',$this->nombre_personnes)->get();
         }
         else
         {   

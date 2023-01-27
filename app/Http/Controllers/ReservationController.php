@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -14,7 +15,12 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        //
+        $reservations=Reservation::where('user_id','=',Auth::user()->id)->get() ?? 'Aucune Réservation correspondante';
+        return view('dashboard',[
+            'resource'=>'reservations',
+            'reservations'=>$reservations,
+            
+        ]);
     }
 
     /**
@@ -46,7 +52,7 @@ class ReservationController extends Controller
      */
     public function show($reservation_id){
       
-        $reservation=Reservation::find($reservation_id) ?? 'Aucune Réservation correspondante';
+        $reservation=Reservation::findOrFail($reservation_id) ?? 'Aucune Réservation correspondante';
         return view('reservation.show',[
             'reservation'=>$reservation,
         ]);

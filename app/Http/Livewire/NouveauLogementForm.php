@@ -57,10 +57,10 @@ class NouveauLogementForm extends Component
 
    
         Logement::create($validatedData);
-        $validatedData['living'] = $this->living->store($this->nom, 'public');
-        $validatedData['sdb'] = $this->sdb->store($this->nom, 'public');
-        $validatedData['cuisine'] = $this->cuisine->store($this->nom, 'public');
-        $validatedData['autre_photo'] = $this->autre_photo->store($this->nom, 'public');
+        $validatedData['living'] = $this->living ? $this->living->store($this->nom, 'public'):'';
+        $validatedData['sdb'] = $this->sdb? $this->sdb->store($this->nom, 'public'):'';
+        $validatedData['cuisine'] = $this->cuisine? $this->cuisine->store($this->nom, 'public'):'';
+        $validatedData['autre_photo'] = $this->autre_photo?$this->autre_photo->store($this->nom, 'public'):'';
    
         return redirect()->to('/logement/liste');
     }

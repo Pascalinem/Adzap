@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'reset' => 'Vottre mot de passe a été modifié!',
+    'reset' => 'Votre mot de passe a été modifié!',
     'sent' => 'Nous vous avons envoyé un email pour changer votre mot de passe',
     'throttled' => 'Veuillez attendre avant de ré-essayer.',
-    'token' => 'Code de modification de mor de passe incorrect.',
+    'token' => 'Code de modification de mot de passe incorrect.',
     'user' => "Aucun compte utilisateur enregistré avec cette adresse email.",
 
 ];

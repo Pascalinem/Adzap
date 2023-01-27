@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
+
 class RegisteredUserController extends Controller
 {
     /**
@@ -49,7 +50,10 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
-        $user->notify(new UserRegisteredNotification($user));
+        
+      
+
+        //$user->notify(new UserRegisteredNotification($user));
 
         Auth::login($user);
 

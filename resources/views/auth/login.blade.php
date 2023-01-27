@@ -1,11 +1,14 @@
 <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
+   
+                    <x-slot name="logo">
+                {{-- <a href="/">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+            </a>  --}}
+        </x-slot>     
 
+        <h2 class=" text-2xl text-center text-[#B4A4B5] font-bold">Bienvenu.e à la résidence Adzap!</h2>
+        <h3 class="text-center mb-10 text-gray-400"> Connectez-vous</h3>
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -51,7 +54,7 @@
                 <span class="ml-2"> <a href="{{ route('register') }}" class="underline text-sm text-gray-600 hover:text-gray-900">Créer Compte</a>
                 </span>
                 <x-primary-button class="ml-3">
-                    {{ __('Log in') }}
+                    {{ __('Je me connecte') }}
                 </x-primary-button>
             </div>
         </form>

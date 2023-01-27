@@ -1,8 +1,8 @@
 
 
     <div class=" mx-auto w-full">
-        <h3 class="ml-8 mt-6 mb-8 text-2xl text-[#6D257D] font-bold ">Nouvelle réservation</h3>
-        <p class="ml-8"> <i>Indiquez les <span class="underline">dates de début</span> et de <span class="underline">fin de séjour</span> souhaitées pour voir les <span class="font-bold underline">appartements disponibles.</span></i></p>
+        
+        <p class="ml-8"> <i>Indiquez les <span class="underline">dates de début</span> et de <span class="underline">fin de séjour</span> souhaitées </span></i></p>
     <form bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 wire:submit.prevent="submit">
         
         <div class="inline-block ml-8 form-group">
@@ -35,6 +35,7 @@
         <div class="inline-block ml-8 my-8 text-[#6D257D] font-bold ">
             Durée Séjour :  {{ $this->nbjours }}  jours 
            <span class="ml-8"> Prix total = {{ $this->prix_total }}  €</span>
+           <span class="ml-8"> Prix total = {{ $this->prix_cfa }}  F CFA</span>
         </div>
         
        <!-- <div>
@@ -42,15 +43,9 @@
                 <p class=" ml-8 font-bold text-[#EA7869]">Veuillez selectionner un appartement pour connaître le prix de votre séjour et pouvoir finaliser votre reservation.</p>
             @endif
         </div>-->
-        <div class="mt-10 ml-8 card-body">
-            @livewire('logement.liste-logement')
-        </div>
-        <div class=" text-xl ml-8 my-8 text-[#6D257D] font-bold card-body">
-            Durée Séjour  :  {{ $this->nbjours }}  jours  <br>
-            Prix total = {{ $this->prix_total }}  €
-        </div>
+    
         @if($date_debut && $date_fin && $nombre_personnes && $logement_id)
-        <button type="submit" class="inline-block bg-[#EA7869] text-[#7E201F] hover:bg-green-400 text-gray-800 text-xl ml-8 font-semibold my-8 py-4 px-4 border border-gray-400 rounded shadow">Sauvegarder la reservation</button>
+        <button type="submit" class="inline-block bg-[#EA7869] text-[#7E201F] hover:bg-green-400 text-gray-800 text-xl ml-8 font-semibold my-8 py-4 px-4 border border-gray-400 rounded shadow">Réserver ce logement</button>
         @endif
         
         

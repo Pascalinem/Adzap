@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Reservation;
+namespace App\Http\Livewire\Logement;
 
 use Carbon\Carbon;
 use Livewire\Component;
@@ -8,7 +8,7 @@ use App\Models\Logement;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
 
-class NouvelleReservationForm extends Component
+class NouvelleReservationLogement extends Component
 {
     
     
@@ -19,6 +19,7 @@ class NouvelleReservationForm extends Component
     public $user_id;
     public $nbjours=0;
     public $nombre_personnes=0;
+    public $prix_cfa=0.0;
     public $statut = [
         '1'=>'En attente de validation',
         '2' => "En attente de paiement",
@@ -28,11 +29,11 @@ class NouvelleReservationForm extends Component
         '6' => "clôturée",
     ];
     public $prix_total = 0;
-    protected $listeners = ['logementSelected'=> 'logementSelected'];
 
     public function mount(){
         
         $this->user_id = Auth::user()->id;
+        $this->logement = Logement::find($this->logement_id);
         $this->statut = "En attente de validation";
 
     }
@@ -49,6 +50,7 @@ class NouvelleReservationForm extends Component
             'statut' => '',
             'nombre_personnes'=>'required|numeric',
             'prix_total'=>'',
+            'prix_cfa'=>'',
             
         ]);
         
@@ -59,7 +61,7 @@ class NouvelleReservationForm extends Component
     
     public function setParams(){
         
-        $this->emit('getParams', $this->date_debut, $this->date_fin, $this->nombre_personnes);
+        $this->emit('getParams', $this->date_debut, $this->date_fin);
         if($this->date_fin && $this->date_debut){
             $this->nbjours=date_diff(date_create($this->date_fin),date_create($this->date_debut)) ;
             $this->nbjours= ($this->nbjours)->format('%a');
@@ -72,6 +74,7 @@ class NouvelleReservationForm extends Component
         if($this->logement){
           
             $this->prix_total= $this->nbjours * $this->logement->tarif;
+            
             if($this->nbjours<8){
                 $this->prix_total = $this->prix_total;
             }
@@ -84,9 +87,15 @@ class NouvelleReservationForm extends Component
             else{
                 $this->prix_total =$this->prix_total*0.9;
             }
+            $this->prix_cfa= 655.957*$this->prix_total;
+            
         }
-        else
-        $this->prix_total= 0;
+        else {
+            $this->prix_total= 0;
+            $this->prix_cfa=0;
+        }
+        
+
 
 
 
@@ -104,6 +113,6 @@ class NouvelleReservationForm extends Component
     
     public function render()
     {
-        return view('livewire.reservation.nouvelle-reservation-form');
+        return view('livewire.logement.nouvelle-reservation-logement');
     }
 }

@@ -10,9 +10,7 @@
                 @livewire('logement.liste-logement')
               </div>
             </div>
-            <div class="card-body">
-            @livewire('reservation.recherche-reservation')
-            </div>
+            
       </div>
   </div>
     @livewireScripts

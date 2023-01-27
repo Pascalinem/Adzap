@@ -20,6 +20,14 @@
         value="{{ Carbon\Carbon::parse()->format('Y-m-d') }}">
             @error('date_fin') <span class="text-danger">{{ $message }}</span> @enderror
         </div>
+
+        <div class="form-group">
+            <label class="mt-4 block text-gray-700 text-sm font-bold mb-2" for="nombre_personnes">Nombre personnes</label>
+            <input type="numeric" wire:model.debounce.300ms="nombre_personnes"
+        class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-1/12 shadow-sm sm:text-sm border-gray-800 "
+        value="">
+            @error('nombre_personnes') <span class="text-danger">{{ $message }}</span> @enderror
+        </div>
        
               
         <button type="submit" class="bg-[#6D257D] hover:bg-[#EA7869]  text-white font-semibold mt-8 py-4 px-4 border border-gray-400 rounded shadow" wire:click="setParams()">C'est parti !</button>

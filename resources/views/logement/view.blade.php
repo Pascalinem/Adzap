@@ -27,8 +27,10 @@
 </div>
 <div>
     <h2 class="text-xl text-[#6D257D] my-6 font-bold" >Disponibilités</h2>
-<span class=" text-sm mx-20 w-100"> @livewire('logement.logement-calendar',['logement_id'=> $logement->id])</span>
-
+<span class=" text-sm mx-20 w-50"> @livewire('logement.logement-calendar',['logement_id'=> $logement->id])</span>
+<span class=" text-sm mx-20 w-50"> @livewire('logement.nouvelle-reservation-logement',['logement_id'=> $logement->id])</span>
+    
+    
 </div>
 @livewireScripts
     @stack('scripts')
