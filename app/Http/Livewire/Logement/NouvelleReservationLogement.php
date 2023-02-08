@@ -32,32 +32,11 @@ class NouvelleReservationLogement extends Component
 
     public function mount(){
         
-        $this->user_id = Auth::user()->id;
         $this->logement = Logement::find($this->logement_id);
         $this->statut = "En attente de validation";
 
     }
 
-    public function submit()
-    {
-          
-        
-        $validatedData = $this->validate([
-            'date_debut' => 'required|date|after:yesterday',
-            'date_fin' => 'required|date|after:date_debut',
-            'logement_id' => 'required',
-            'user_id' => 'required',
-            'statut' => '',
-            'nombre_personnes'=>'required|numeric',
-            'prix_total'=>'',
-            'prix_cfa'=>'',
-            
-        ]);
-        
-
-        $reservation=Reservation::create($validatedData);
-        return redirect()->to('/reservation/'.$reservation->id);
-    }
     
     public function setParams(){
         
@@ -87,7 +66,7 @@ class NouvelleReservationLogement extends Component
             else{
                 $this->prix_total =$this->prix_total*0.9;
             }
-            $this->prix_cfa= 655.957*$this->prix_total;
+            $this->prix_cfa= round(655.957*$this->prix_total,0);
             
         }
         else {

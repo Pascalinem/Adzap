@@ -10,14 +10,12 @@
             <div class="grow-0 shrink-0 basis-auto mb-6 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
               <h2 class="text-3xl text-[#EA7869] font-bold mb-6">Contactez-nous</h2>
               <p class="text-gray-500 mb-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Laudantium, modi accusantium ipsum corporis quia asperiores
-                dolorem nisi corrupti eveniet dolores ad maiores repellendus enim
-                autem omnis fugiat perspiciatis? Ad, veritatis.
+               Avez-vous des questions ? Souhaitez-vous reserver pour un groupe ou êtes-vous plus que 5 personnes? <br> N'hésitez pas à nous contacter. Nous sommes disponibles et répondons à toutes vos questions.
               </p>
               <p class="text-gray-500 mb-2">Yaounde</p>
-              <p class="text-gray-500 mb-2">Tel: </p>
-              <p class="text-gray-500 mb-2">residenceadzap1@gmail.com</p>
+              <p class="text-gray-500 mb-2">Tel: +237 675 640 576 <br> +32 470 67 06 49 </p>
+              <p class="text-gray-500 mb-2"> <a
+                href="mailto:residenceadzap1@gmail.com" target="blank">residenceadzap1@gmail.com</a></p>
             </div>
             <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
               <form>
@@ -36,10 +34,10 @@
                     ease-in-out
                     m-0
                     focus:text-gray-700 focus:bg-white focus:border-[#EA7869] focus:outline-none" id="exampleInput7"
-                    placeholder="Nom et prénom">
+                    placeholder="Vos noms et prénoms">
                 </div>
                 <div class="form-group mb-6">
-                  <input type="email" class="form-control block
+                  <input type="mail" class="form-control block
                     w-full
                     px-3
                     py-1.5
@@ -53,7 +51,7 @@
                     ease-in-out
                     m-0
                     focus:text-gray-700 focus:bg-white focus:border-[#EA7869] focus:outline-none" id="exampleInput8"
-                    placeholder="Adresse mail">
+                    placeholder="Votre adresse e-mail">
                 </div>
                 <div class="form-group mb-6">
                   <textarea class="
@@ -72,7 +70,7 @@
                     ease-in-out
                     m-0
                     focus:text-gray-700 focus:bg-white focus:border-[#EA7869] focus:outline-none
-                  " id="exampleFormControlTextarea13" rows="3" placeholder="Message"></textarea>
+                  " id="exampleFormControlTextarea13" rows="3" placeholder="Votre Message"></textarea>
                 </div>
                 <div class="form-group form-check text-center mb-6">
                   <input type="checkbox"

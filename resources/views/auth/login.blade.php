@@ -8,6 +8,7 @@
         </x-slot>     
 
         <h2 class=" text-2xl text-center text-[#B4A4B5] font-bold">Bienvenu.e à la résidence Adzap!</h2>
+        <h3 class="text-center  text-gray-400">Les meublés pour des séjours de rêves à Yaoundé</h3>
         <h3 class="text-center mb-10 text-gray-400"> Connectez-vous</h3>
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />

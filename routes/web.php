@@ -3,6 +3,7 @@
 use App\Models\Logement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\SitemapXmlController;
 use App\Http\Controllers\ReservationController;
 
 /*
@@ -31,7 +32,7 @@ Route::get('/apropos', function () {
 })->name('adzap_et_la_ville');
 
 Route::get('/options', function () {
-    return view('options');
+    return view('livewire/logement/options');
 })->name('options');
 
 Route::get('send-mail', [MailController::class, 'index']);
@@ -70,12 +71,13 @@ Route::get('/logement/liste', function () {
 
 Route::get('/logement/{logement}', function (Logement $logement) {
     return view('logement/view',['logement' => $logement]);
-})->middleware('web','auth');
+});
 
 Route::get('/utilisateurs/liste', function () {
     return view('utilisateur/utilisateurs-datatable');
 })->middleware('web','auth')->name('liste-utilisateurs');
 
+Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
 
 
 

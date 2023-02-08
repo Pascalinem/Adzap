@@ -13,7 +13,7 @@ class Reservation extends Model
         'user_id',
         'date_debut',
         'date_fin',
-        'statut',
+        'statut_id',
         'nombre_personnes',
         'prix_total',
         'prix_cfa'
@@ -27,6 +27,11 @@ class Reservation extends Model
     public function logement()
     {
         return $this->belongsTo(Logement::class);
+    }
+
+    public function statut()
+    {
+        return $this->belongsTo(StatutReservation::class);
     }
     
 }

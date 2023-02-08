@@ -1,11 +1,5 @@
-<footer aria-label="Site Footer" class="bg-[#B4A4B5]  lg:grid lg:grid-cols-5 bottom-0 w-full">
-    <div class="relative block h-32 lg:col-span-2 lg:h-full">
-      <img
-        src="{{ URL::asset('/images/hero2.jpg') }}"
-        alt=" hero"
-        class="absolute inset-0 object-cover w-full h-full"
-      />
-    </div>
+<footer aria-label="Site Footer" class="bg-[#B4A4B5]  lg:grid lg:grid-cols-3 bottom-0 w-full">
+    
   
     <div class="px-4 py-10 sm:px-6 lg:col-span-3 lg:px-8">
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -17,7 +11,7 @@
   
             <a
               href="#"
-              class="block text-xl font-medium text-gray-900 hover:opacity-75  mt-4 sm:text-xl"
+              class="block text-sm font-medium text-gray-900 hover:opacity-75  mt-4 sm:text-xl"
             >
             +237 675 640 576 (WhatsApp)
             </a>
@@ -25,7 +19,7 @@
             href="#"
             class="block text-xl font-medium text-gray-900 hover:opacity-75  mt-4 sm:text-xl"
           >
-          +32 470 67 06 49 
+          +32 470 67 06 49 (WhatsApp)
           </a>
           <a
           href="mailto:residenceadzap1@gmail.com" target="blank"
@@ -36,7 +30,7 @@
           </p>
   
           <ul class="mt-8 space-y-1 text-sm text-gray-700">
-            <li>Nous sommes joignables du lundi au dimanche: 6h - 23h</li>
+            <li>Nous sommes joignables du lundi au dimanche: 6h - 22h</li>
           
           </ul>
   

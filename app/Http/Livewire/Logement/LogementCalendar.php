@@ -37,7 +37,7 @@ class LogementCalendar extends Component
             $event['title'] = "réservé";
             $event['start'] = $reservation->date_debut;
             $event['end'] = $reservation->date_fin;
-            $event['url'] = '/reservation/'.$reservation->id;
+           // $event['url'] = '/reservation/'.$reservation->id;
             
 
             $event['backgroundColor'] = $color;

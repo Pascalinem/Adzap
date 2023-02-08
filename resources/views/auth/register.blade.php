@@ -13,7 +13,7 @@
 
             <!-- Name -->
             <div>
-                <x-input-label for="name" :value="__('Nom')" />
+                <x-input-label for="name" :value="__('Nom.s et prénom.s')" />
 
                 <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
 

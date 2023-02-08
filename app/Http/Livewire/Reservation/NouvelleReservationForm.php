@@ -21,13 +21,12 @@ class NouvelleReservationForm extends Component
     public $nombre_personnes=0;
     public $statut = [
         '1'=>'En attente de validation',
-        '2' => "En attente de paiement",
-        '3' => "Validée",
-        '4' => 'paiement reçu',
-        '5' => "Annulée",
-        '6' => "clôturée",
+        '2'=> "Validée",
+        '3' => "Annulée",
+      
     ];
     public $prix_total = 0;
+    public $prix_cfa=0;
     protected $listeners = ['logementSelected'=> 'logementSelected'];
 
     public function mount(){
@@ -51,6 +50,8 @@ class NouvelleReservationForm extends Component
             'prix_total'=>'',
             
         ]);
+
+
         
 
         $reservation=Reservation::create($validatedData);
@@ -84,9 +85,12 @@ class NouvelleReservationForm extends Component
             else{
                 $this->prix_total =$this->prix_total*0.9;
             }
+            $this->prix_cfa= round(655.957*$this->prix_total, 0);
         }
-        else
+        else{
         $this->prix_total= 0;
+        $this->prix_cfa=0;
+        }
 
 
 
