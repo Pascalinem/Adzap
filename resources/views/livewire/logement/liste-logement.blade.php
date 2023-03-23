@@ -22,7 +22,7 @@
       </div>
         @else
         <span class="inline-block bg-green-200 rounded-full px-10 py-6 text-xl font-semibold text-black-700 mr-2 mb-2">
-          <button wire:click="selectLogement('{{ $logement->id }}')">Sélectionner</button>
+          <button type="button" wire:click="selectLogement('{{ $logement->id }}')">Sélectionner</button>
         </span>
         @endif
       @endif

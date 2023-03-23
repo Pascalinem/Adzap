@@ -38,7 +38,7 @@ class NouvelleReservationForm extends Component
 
     public function submit()
     {
-          
+ 
         
         $validatedData = $this->validate([
             'date_debut' => 'required|date|after:yesterday',
@@ -50,8 +50,6 @@ class NouvelleReservationForm extends Component
             'prix_total'=>'',
             
         ]);
-
-
         
 
         $reservation=Reservation::create($validatedData);

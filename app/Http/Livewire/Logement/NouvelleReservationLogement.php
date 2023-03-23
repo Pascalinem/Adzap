@@ -37,6 +37,8 @@ class NouvelleReservationLogement extends Component
 
     }
 
+    public function submit(){}
+    
     
     public function setParams(){
         
